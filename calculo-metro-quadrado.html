@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cálculo de Área</title>
+</head>
+<body>
+	<h1>Cálculo de Área</h1>
+	<p>Informe os valores da largura e comprimento em metros:</p>
+	<form>
+		<label for="largura">Largura:</label>
+		<input type="number" id="largura">
+		<label for="comprimento">Comprimento:</label>
+		<input type="number" id="comprimento">
+		<button type="button" onclick="calcularArea()">Calcular</button>
+	</form>
+	<p id="resultado"></p>
+	
+	<script>
+		function calcularArea() {
+			const largura = Number(document.getElementById("largura").value);
+			const comprimento = Number(document.getElementById("comprimento").value);
+			const area = largura * comprimento;
+			document.getElementById("resultado").textContent = `A área do espaço é de ${area} metros quadrados.`;
+		}
+	</script>
+</body>
+</html>
